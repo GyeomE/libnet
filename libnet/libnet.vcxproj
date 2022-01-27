@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{89cd3bde-4a13-4046-920c-597fe69ade5b}</ProjectGuid>
+    <RootNamespace>libnet</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\최원겸\Desktop\동아리 관련\https\Libnet, Libpcap\libnet\libnet\libnet\libnet-1.2\libnet-1.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\최원겸\Desktop\동아리 관련\https\Libnet, Libpcap\libnet\libnet\libnet\libnet-1.2\libnet-1.2\win32\wpdpack\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Packet.lib;wpcap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\arp-new.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\arp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\bgp4_hdr.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\bgp4_notification.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\bgp4_open.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\bgp4_update.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\cdp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\dhcp_discover.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\dns.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\dot1x.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\fddi_tcp1.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\fddi_tcp2.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\get_addr.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\gre.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\hsrp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\icmp6_echoreq.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\icmp6_unreach.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\icmp_echo_cq.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\icmp_redirect.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\icmp_timeexceed.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\icmp_timestamp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\icmp_unreach.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\ieee.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\ip_link.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\ip_raw.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\isl.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\mpls.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\ntp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\ospf_hello.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\ospf_lsa.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\ping_of_death.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\rpc_tcp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\rpc_udp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\sebek.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\smurf.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\stp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\synflood.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\synflood6.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\synflood6_frag.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\tcp1.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\tcp2.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\test_ipv4.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\test_ipv4_options.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\test_ipv6_icmpv4.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\tftp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\tring_tcp1.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\tring_tcp2.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\udp1.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\udp2.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\sample\win32\getopt.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_advanced.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_asn1.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_802.1q.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_802.1x.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_802.2.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_802.3.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_arp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_bgp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_cdp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_data.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_dhcp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_dns.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_ethernet.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_fddi.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_gre.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_hsrp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_icmp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_igmp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_ip.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_ipsec.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_isl.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_link.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_mpls.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_ntp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_ospf.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_rip.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_rpc.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_sebek.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_snmp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_stp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_tcp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_token_ring.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_udp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_build_vrrp.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_checksum.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_cq.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_crc.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_dll.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_error.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_if_addr.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_init.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_internal.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_bpf.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_dlpi.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_linux.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_nit.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_none.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_pf.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_snit.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_snoop.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_link_win32.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_pblock.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_port_list.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_prand.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_raw.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_resolve.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_version.c" />
+    <ClCompile Include="libnet-1.2\libnet-1.2\src\libnet_write.c" />
+    <ClCompile Include="alert.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libnet-1.2\libnet-1.2\doc\api-foot.html" />
+    <None Include="libnet-1.2\libnet-1.2\doc\api-head.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\bpf.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\config.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\gnuc.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\ifaddrlist.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\libnet.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\libnet\libnet-asn1.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\libnet\libnet-functions.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\libnet\libnet-headers.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\libnet\libnet-macros.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\libnet\libnet-structures.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\include\libnet\libnet-types.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\sample\libnet_test.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\src\common.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\config.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\getopt.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\libnet.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\stdint.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\bittypes.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\ip6_misc.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\Packet32.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap-bpf.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap-namedb.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap-stdinc.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap\bluetooth.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap\bpf.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap\namedb.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap\pcap.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap\sll.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap\usb.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\pcap\vlan.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\remote-ext.h" />
+    <ClInclude Include="libnet-1.2\libnet-1.2\win32\wpdpack\Include\Win32-Extensions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libnet-1.2\libnet-1.2\src\libnet_dll_info.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
